@@ -56,7 +56,7 @@ def push_to_pinecone(pinecone_index_name, embeddings, docs):
 # ✅ Connect to an existing Pinecone index
 def get_pinecone_index():
     init_pinecone()
-    pinecone_index_name = os.getenv("PINECONE_INDEX_NAME")
+    pinecone_index_name = os.getenv("major-project")
     return pinecone.Index(pinecone_index_name)
 
 

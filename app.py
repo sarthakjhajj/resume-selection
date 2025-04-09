@@ -48,7 +48,7 @@ def main():
             embeddings=create_embeddings_load_data()
 
             #Push data to PINECONE
-            push_to_pinecone(pineconekey,"resapp",embeddings,final_docs_list)
+            push_to_pinecone("major-project",embeddings,final_docs_list)
 
             #Fecth relavant documents from PINECONE
             relavant_docs=similar_docs(job_description,document_count,pineconekey,"resapp",embeddings,st.session_state['unique_id'])
